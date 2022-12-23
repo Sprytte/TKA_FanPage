@@ -50,6 +50,7 @@ function HomePage(){
             <ul>
             {arcs.map((i)=>{
                 return <li><Arcs
+                id = {i.id}
                 name = {i.arcName}
                 descrip = {i.arcDescription}
                 summary = {i.summaryDescription}></Arcs> </li>

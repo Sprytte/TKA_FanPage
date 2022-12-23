@@ -4,6 +4,7 @@ import Adaps from './Adaps';
 
 function Adaptations({id,name, summary, images})
 {
+    const [counter, setCounter] = useState(0)
     const [adaps, setAdaps] = useState([]);
     const loadTodosFromAPI = ()=>{
         axios.get('http://localhost:8081/TKA/Adaptations')
@@ -18,11 +19,15 @@ function Adaptations({id,name, summary, images})
         loadTodosFromAPI()
     },[])
 
-    const [adapId, setAdapId] = useState(0);
+    const [adapId, setAdapId] = useState(1);
     const ViewOne = ({onClick}) => (
         <div className="adaptationBoxes">
             {setAdapId(id)}
-            <img className="adapImg" src={images} alt="adaptation" onClick={() => onClick("view2")}/>
+            <img className="adapImg" src={images} alt="adaptation" onClick={() =>
+                onClick("view2")
+                /*setCounter(counter+1) &&
+                counter % 2 === 0 ? onClick("view2"): onClick("view1")
+            */}/>
             <div>{name}</div>
             <div>{summary}</div>
         </div>
@@ -46,6 +51,7 @@ function Adaptations({id,name, summary, images})
             {currentView === "view1" ? 
                 <ViewOne onClick={page => setCurrentView(page)} /> : 
                 <ViewTwo onClick={page => setCurrentView(page)} />}
+            {counter}
     </>)
 }
 
