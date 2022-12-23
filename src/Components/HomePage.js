@@ -2,6 +2,7 @@ import Adaptations from "./Adaptations";
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import tkaPic from '../images/head.jpg';
+import Arcs from './Arcs';
 import Adaps from './Adaps';
 
 function HomePage(){
@@ -10,14 +11,27 @@ function HomePage(){
         axios.get('http://localhost:8081/TKA/Adaptations')
         .then((response)=>{
             if(response.status === 200){
-                const item = response.data
-                setAdaptations(item)
+                const adaptation = response.data
+                setAdaptations(adaptation)
             }
         });
     }
-
     useEffect(()=>{
         loadTodosFromAPI()
+    },[])
+    
+    const [arcs, setArcs] = useState([]);
+    const loadArcs = ()=>{
+        axios.get('http://localhost:8081/TKA/Adaptations/1/Arcs')
+        .then((response)=>{
+            if(response.status === 200){
+                const arc = response.data
+                setArcs(arc)
+            }
+        });
+    }
+    useEffect(()=>{
+        loadArcs()
     },[])
 
     const ViewOne = () => (
@@ -33,7 +47,14 @@ function HomePage(){
       );
       const ViewTwo = () => (
         <div>
-            <h1>Second page</h1>
+            <ul>
+            {arcs.map((i)=>{
+                return <li><Arcs
+                name = {i.arcName}
+                descrip = {i.arcDescription}
+                summary = {i.summaryDescription}></Arcs> </li>
+            })}
+            </ul>
         </div>
       );
       const [currentView, setCurrentView] = React.useState("view1");
@@ -45,9 +66,9 @@ function HomePage(){
             </header>
 
             <nav>
-                <button onClick={() => (setCurrentView("view1"))}>Home</button> &nbsp; 
-                <button onClick={() => (setCurrentView("view2"))}>Adaptations</button> &nbsp; 
-                <button>Arcs</button>
+                <button onClick={() => (setCurrentView("view1"))}>Story</button> &nbsp; 
+                <button onClick={() => (setCurrentView("view2"))}>Arcs</button> &nbsp; 
+                <button >Arcs</button>
             </nav>
 
             <main>

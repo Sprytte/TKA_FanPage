@@ -43,11 +43,9 @@ function Adaptations({id,name, summary, images})
     const [currentView, setCurrentView] = React.useState("view1");
     
     return(<>
-        <div>
             {currentView === "view1" ? 
                 <ViewOne onClick={page => setCurrentView(page)} /> : 
                 <ViewTwo onClick={page => setCurrentView(page)} />}
-        </div>
     </>)
 }
 

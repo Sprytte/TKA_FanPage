@@ -27,6 +27,15 @@
   text-align: center;
   background-image:linear-gradient(white, red);
 }
+li{
+  list-style-type: none;
+  border-style: solid;
+  margin-right:15px;
+  margin-top: -2px;
+  margin-bottom: -1px;
+  border-collapse:collapse;
+
+}
 
 nav{border-style:solid;
 	border-color:black;
