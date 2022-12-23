@@ -20,7 +20,7 @@ function HomePage(){
         loadTodosFromAPI()
     },[])
 
-    const ViewOne = ({onClick}) => (
+    const ViewOne = () => (
         <div>
             {adaptations.map((i)=>{
                 return <Adaptations
@@ -31,31 +31,23 @@ function HomePage(){
             })}
         </div>
       );
-      const [adapId, setAdapId] = useState(0);
-      const ViewTwo = ({onClick}) => (
+      const ViewTwo = () => (
         <div>
-            <Adaps
-                name = {adaptations[adapId].adaptationName}
-                summary = {adaptations[adapId].fullSummary}
-                images = {adaptations[adapId].imageAddress}
-                rating = {adaptations[adapId].rating}
-                length = {adaptations[adapId].length}
-                creators = {adaptations[adapId].creators}
-                info = {adaptations[adapId].extraInformation}></Adaps>
+            <h1>Second page</h1>
         </div>
       );
       const [currentView, setCurrentView] = React.useState("view1");
 
     return (
-        <div id="bodyId">
+        <div className="bodyId">
             <header className="headImg">
                 <img src={tkaPic} alt="tka novel"></img>
             </header>
 
             <nav>
                 <button onClick={() => (setCurrentView("view1"))}>Home</button> &nbsp; 
-                <button onClick={() => (setCurrentView("view2"))}>Arcs</button> &nbsp; 
-                <button>Adaptations</button>
+                <button onClick={() => (setCurrentView("view2"))}>Adaptations</button> &nbsp; 
+                <button>Arcs</button>
             </nav>
 
             <main>
@@ -63,7 +55,6 @@ function HomePage(){
                     <ViewOne onClick={page => setCurrentView(page)} /> : 
                     <ViewTwo onClick={page => setCurrentView(page)} />}
             </main>
-            
         </div>)
 }
 
