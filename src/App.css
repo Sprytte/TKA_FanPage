@@ -1,38 +1,40 @@
-.App {
+.headImg{
+  margin-left: 30%;
+}
+
+#bodyId{
+  background-image: linear-gradient(white, red);
+}
+.adapImg{
+  width: 275px;
+  height: 325px;
+}
+.adaptationBoxes{
+  width: 600px;
+  height: 375px;
+  padding: 15px;
+  float:left;
+  margin: 15px 35px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{border-style:solid;
+	border-color:black;
+	color:white;
+	text-align:center;
+	padding:0.5% 0%;
+	background-color:black;
+	background-image:linear-gradient(black, red);
+	border-width:3px;
+  margin: 0px 3px;
+  border-radius: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+nav a:link{color:#a9a9a9;
+  text-decoration:none;}
+footer a{color:white;
+    text-decoration:none;}
+nav a:visited{color:#a9a9a9 ;
+  text-decoration:none;}
+nav a:hover{color:ghostwhite;
+  text-decoration:none;
+  font-size:1.15em;}
