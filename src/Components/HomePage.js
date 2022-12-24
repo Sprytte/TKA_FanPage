@@ -6,6 +6,8 @@ import Arcs from './Arcs';
 import Adaps from './Adaps';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Favorites from "./Favorites";
+import { Pane } from "react-sortable-pane";
 
 function HomePage(){
     const [adaptations, setAdaptations] = useState([]);
@@ -34,6 +36,20 @@ function HomePage(){
     }
     useEffect(()=>{
         loadArcs()
+    },[])
+
+    const [fav, setFav] = useState([]);
+    const loadFavorites = ()=>{
+        axios.get('http://localhost:8081/TKA/Adaptations/1/Favorites')
+        .then((response)=>{
+            if(response.status === 200){
+                const fav = response.data
+                setFav(fav)
+            }
+        });
+    }
+    useEffect(()=>{
+        loadFavorites()
     },[])
 
     const StoriesPage = () => (
@@ -89,7 +105,13 @@ function HomePage(){
         <div>
             <h1>Fan Favorites</h1>
             <p>Below is a list of all the arcs inside of the light-novel.</p>
-            
+            {fav.map((i)=>{
+                return <Pane key={i.id}><Favorites
+                id = {i.id}
+                chapters = {i.chapters}
+                descrip = {i.description}
+                user = {i.username}></Favorites> </Pane>
+            })}
         </div>
       );
 
