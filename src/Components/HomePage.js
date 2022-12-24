@@ -93,7 +93,7 @@ function HomePage(){
       const ArcsPage = () => (
         <div>
             <h1>Arcs</h1>
-            <p>Below is a list of all the arcs inside of the light-novel.</p>
+            <p>Below is a list of all the arcs inside of the light-novel. Click on the arc to see the full summary.</p>
             <h4>If it wasn't obvious, major spoilers ahead. You have been warned</h4> <br/>
             <ul>
             {arcs.map((i)=>{
@@ -167,6 +167,9 @@ function HomePage(){
             </SortablePane>
         </div>
     );
+    useEffect(()=>{
+        <FavoritesPage onClick={page => setPage(page)}/>
+    },[fav])
     
     const formSubmit = (event) =>{
         event.preventDefault();
@@ -226,10 +229,6 @@ function HomePage(){
             <main>
                 {gettingViews()}
             </main>
-
-            {/*<footer>
-                <h2>The King's avatar Fan Page</h2>
-            </footer>*/}
         </div>)
 }
 

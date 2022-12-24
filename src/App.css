@@ -1,7 +1,7 @@
+/*Home Page*/
 .headImg{
   margin-left: 30%;
 }
-
 .bodyId{
   background-image: linear-gradient(white, red);
 }
@@ -9,6 +9,15 @@
   width: 275px;
   height: 325px;
 }
+.pain{
+  margin: 0px 23%;
+  background-color: gainsboro;
+}
+#smaller{
+  width:129.5px;
+}
+
+/*Adaptation Page*/
 .adaptationBoxes{
   width: 600px;
   height: 375px;
@@ -27,57 +36,28 @@
   text-align: center;
   background-image:linear-gradient(white, red);
 }
-li{
-  list-style-type: none;
-  border-style: solid;
-  margin-right:15px;
-  margin-top: -2px;
-  margin-bottom: -1px;
-  border-collapse:collapse;
 
-}
-h1{
-  text-align: center;
-}
-p{
-  text-align: center;
-  margin: 2% 15%;
+/*Arcs Page*/
+.ark{
+  margin: 9px 15px;
+  margin-left: 3%;
 }
 .sums{
   margin: 9px 15px;
-  /*margin-right: 30%;*/
+  margin-left: 3%;
+  margin-right: 5%;
 }
-footer{
-  background-color: red;
-  float: none;
-}
-.pain{
-  margin: 0px 23%;
-  background-color: gainsboro;
-}
+
+/*Favorites Page*/
 .chaps{
   background-color: aliceblue;
-}
-i{
-  text-decoration: underline;
-  text-align: center;
-}
-h4{
-  text-align: center;
-  color:rgb(207, 13, 13)
-}
-form{
-  text-align: right;
-  margin-right: 40%;
-}
-#smaller{
-  width:129.5px;
 }
 #toTheRight{
   float: right;
   margin-right: 7px;
 }
 
+/*Tags*/
 nav{border-style:solid;
 	border-color:black;
 	color:white;
@@ -96,8 +76,36 @@ nav button{
 a{
   color:black;
 }
-nav button:visited{color:#a9a9a9 ;
-  text-decoration:none;}
-nav button:hover{color:ghostwhite;
+nav button:hover{
+  color:ghostwhite;
   text-decoration:none;
-  font-size:1.15em;}
+  font-size:1.15em;
+}
+li{
+  list-style-type: none;
+  border-style: solid;
+  margin-right:15px;
+  margin-top: -2px;
+  margin-bottom: -1px;
+  border-collapse:collapse;
+
+}
+h1{
+  text-align: center;
+}
+p{
+  text-align: center;
+  margin: 2% 15%;
+}
+h4{
+  text-align: center;
+  color:rgb(207, 13, 13)
+}
+form{
+  text-align: right;
+  margin-right: 40%;
+}
+i{
+  text-decoration: underline;
+  text-align: center;
+}

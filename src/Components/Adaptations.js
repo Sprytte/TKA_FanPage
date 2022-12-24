@@ -3,17 +3,17 @@ import React from "react";
 function Adaptations({name, smallSummary, fullSummary, rating, creators, length, info, images}){
     const Gods = creators.split(',');
 
-    const ViewOne = ({onClick}) => (
+    const MainPage = ({onClick}) => (
         <div className="adaptationBoxes">
-            <img className="adapImg" src={images} alt="adaptation" onClick={() =>onClick("view2")}/>
+            <img className="adapImg" src={images} alt="adaptation" onClick={() =>onClick("sumPage")}/>
             <div>{name}</div>
             <div>{smallSummary}</div>
         </div>
       );
       
-    const ViewTwo = ({onClick}) => (
+    const SumPage = ({onClick}) => (
         <div className='fullAdaptationBox'>
-        <img className="adapImg" src={images} alt="adaptation" onClick={() =>onClick("view1")}/>
+        <img className="adapImg" src={images} alt="adaptation" onClick={() =>onClick("mainPage")}/>
             <div>{name}</div>
             <div>{fullSummary}</div>
             <div>Rating: {rating}</div>
@@ -24,12 +24,12 @@ function Adaptations({name, smallSummary, fullSummary, rating, creators, length,
             <div>{info}</div>
         </div>
     );
-    const [currentView, setCurrentView] = React.useState("view1");
+    const [viewPage, setViewPage] = React.useState("mainPage");
     
     return(<>
-            {currentView === "view1" ? 
-                <ViewOne onClick={page => setCurrentView(page)} /> : 
-                <ViewTwo onClick={page => setCurrentView(page)} />}
+            {viewPage === "mainPage" ? 
+                <MainPage onClick={page => setViewPage(page)} /> : 
+                <SumPage onClick={page => setViewPage(page)} />}
     </>)
 }
 
