@@ -28,7 +28,7 @@ function Arcs({id,name, descrip, summary}){
       );
       
     const ViewTwo = () => (
-        <div>
+        <div className="sums">
             <ArcSummaries summary = {arcs[arcId-1].summary.summaryDescription}></ArcSummaries>
         </div>
     );

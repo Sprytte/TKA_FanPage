@@ -51,7 +51,6 @@ function Adaptations({id,name, summary, images})
             {currentView === "view1" ? 
                 <ViewOne onClick={page => setCurrentView(page)} /> : 
                 <ViewTwo onClick={page => setCurrentView(page)} />}
-            {counter}
     </>)
 }
 
