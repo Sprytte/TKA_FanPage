@@ -162,7 +162,7 @@ function HomePage(){
                 <button type='submit'>Add Item</button>
             </form>   
 
-            <SortablePane direction="vertical" margin={15} defaultOrder={['0', '1']}>
+            <SortablePane direction="vertical" margin={15} >
                 {panes}
             </SortablePane>
         </div>
