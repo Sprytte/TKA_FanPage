@@ -1,21 +1,6 @@
-import ArcSummaries from "./ArcSummaries";
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
 
 function Arcs({id,name, descrip, summary}){
-    const [arcs, setArcs] = useState([]);
-    const loadArcs = ()=>{
-        axios.get('http://localhost:8081/TKA/Adaptations/1/Arcs')
-        .then((response)=>{
-            if(response.status === 200){
-                const arc = response.data
-                setArcs(arc)
-            }
-        });
-    }
-    useEffect(()=>{
-        loadArcs()
-    },[])
 
     const [arcId, setArcId] = useState(1);
     const ViewOne = ({onClick}) => (
@@ -23,13 +8,12 @@ function Arcs({id,name, descrip, summary}){
             {setArcId(id)}
             {name}<br/>
             {descrip}<br/>
-            {summary}<br/>
         </div>
       );
       
-    const ViewTwo = () => (
-        <div className="sums">
-            <ArcSummaries summary = {arcs[arcId-1].summary.summaryDescription}></ArcSummaries>
+    const ViewTwo = ({onClick}) => (
+        <div className="sums" onClick={()=>onClick("view1")}>
+            {summary}
         </div>
     );
     const [currentView, setCurrentView] = React.useState("view1");

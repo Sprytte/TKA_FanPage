@@ -100,7 +100,7 @@ function HomePage(){
                 id = {i.id}
                 name = {i.arcName}
                 descrip = {i.arcDescription}
-                summary = {i.summaryDescription}></Arcs> </li>
+                summary = {i.summary.summaryDescription}></Arcs> </li>
             })}
             </ul>
         </div>

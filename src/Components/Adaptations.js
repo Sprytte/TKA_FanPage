@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
 
 function Adaptations({id,name, smallSummary, fullSummary, rating, creators, length, info, images})
 {
