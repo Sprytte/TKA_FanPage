@@ -11,7 +11,7 @@
 }
 .pain{
   margin: 0px 23%;
-  background-color: gainsboro;
+  background-image:linear-gradient(rgb(229, 215, 215), rgb(255, 0, 0))
 }
 #smaller{
   width:129.5px;
@@ -50,7 +50,7 @@
 
 /*Favorites Page*/
 .chaps{
-  background-color: aliceblue;
+  background-color: rgb(255, 251, 251);
 }
 #toTheRight{
   float: right;
