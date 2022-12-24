@@ -55,7 +55,7 @@ function HomePage(){
         <div>
             <h1>The King's Avatar</h1>
             <p>The King's Avatar started off as a light-novel, originally published on July 1, 2011 by Hu Dielan, also known as
-                Butterfly Blue.
+                Butterfly Blue. Since then, there have been numerous adaptations made to keep up with its hungry fanbase.
             </p>
             <p>Synopsis: In the online game Glory, Ye Xiu is regarded as a textbook and a top-tier pro-player. However, due to a
                 myriad reasons, he is kicked from the team. After leaving the professional scene, he finds work in an Internet Cafe
@@ -73,7 +73,7 @@ function HomePage(){
             </p>
             <p>Below are all the available adaptations including the original. As some works are not yet completed, the information is
                 still getting updated. Let us know if anything is missing or incorrect! <br/>
-                <i><a href="">tkafans@hotmail.com</a></i>
+                <i>tkafans@hotmail.com</i>
             </p>
             {adaptations.map((i)=>{
                 return <Adaptations
@@ -94,6 +94,7 @@ function HomePage(){
         <div>
             <h1>Arcs</h1>
             <p>Below is a list of all the arcs inside of the light-novel.</p>
+            <h4>If it wasn't obvious, major spoilers ahead. You have been warned</h4> <br/>
             <ul>
             {arcs.map((i)=>{
                 return <li><Arcs
@@ -105,13 +106,32 @@ function HomePage(){
             </ul>
         </div>
       );
+      const deleteItem = (id)=>{
+        axios.delete("http://localhost:8081/TKA/Favorites/" + id)
+    }
+    const addItem = (item)=>{
+        axios.post('http://localhost:8081/TKA/Adaptations/1/Favorites',{
+            chapters: item.chapters,
+            description: item.description,
+            username: item.username
+          })
+          .then((response)=>{
+            if(response === 200){
+                loadFavorites()
+            }
+          })
+          .catch((error)=>{
+            console.log(error);
+          });
+    }
         
       const favorites = fav.map((i)=>{
             return <Favorites
             id = {i.id}
             chapters = {i.chapters}
             descrip = {i.description}
-            user = {i.username}></Favorites>
+            user = {i.username}
+            deleteItem = {deleteItem}></Favorites>
         })
         const length = favorites.length
         const arr = () => {
@@ -132,39 +152,31 @@ function HomePage(){
             <p>Below are the fan favorite moments in the entire novel, ranked by preference. If they don't suit your taste, switch them
                 around as you please!
             </p>
-            <p>Think a scene is missng? Add it yourself!</p>
+            <p>Think a scene is missing? Add it yourself!</p>
             <form onSubmit={formSubmit}>
-                <label>Chapter(s):</label> <input name='chapNb'></input> <br/>
+                <label for='chapterNumbers'>Chapter(s):</label> <input name='chapNb' id='chapterNumbers'></input> <br/>
                 <label>Scene(s) description:</label> <input name='sceneDescrip'></input> <br/>
-                <label>Username:</label> <input name='userName'></input>
+                <label>Username:</label>
+                <input type="radio" name="user" value="Anonymous" id='anon'/><label for='anon'>Remain Anonymous</label><br/>
+                <input type="radio" name="user" value="Specified" id='spec'/> <input type="text" name="userName" id='smaller'></input> <br/>
                 <button type='submit'>Add Item</button>
             </form>   
 
-            <SortablePane direction="vertical" margin={20} defaultOrder={['0', '1']}>
+            <SortablePane direction="vertical" margin={15} defaultOrder={['0', '1']}>
                 {panes}
             </SortablePane>
         </div>
     );
-    const addItem = (item)=>{
-        axios.post('http://localhost:8081/TKA/Adaptations/1/Favorites',{
-            chapters: item.chapters,
-            description: item.description,
-            username: item.username
-          })
-          .then((response)=>{
-            if(response === 200){
-                loadFavorites()
-            }
-          })
-          .catch((error)=>{
-            console.log(error);
-          });
-    }
+    
     const formSubmit = (event) =>{
         event.preventDefault();
         const itemC = event.target.elements.chapNb.value;
         const itemD = event.target.elements.sceneDescrip.value;
-        const itemU = event.target.elements.userName.value;
+        var itemU = "";
+        if(event.target.elements.userName.value !== "")
+            itemU = event.target.elements.userName.value;
+        else
+            itemU = "Anonymous"
         event.target.elements.chapNb.value = "";
         event.target.elements.sceneDescrip.value = "";
         event.target.elements.userName.value = "";
@@ -174,24 +186,24 @@ function HomePage(){
         }
         addItem({"chapters": itemC, "description": itemD, "username": itemU});
     }
-    const [currentView, setCurrentView] = React.useState("storiesPage");
+    const [page, setPage] = React.useState("storiesPage");
     const tempId = "custom-id-yes";
     const notify = () => (toast("Don't forget to support the author on QiDian!", {toastId: tempId}));
     
     const gettingViews = ()=>{
         return (<>
               {(() => {
-                if (currentView === "storiesPage") {
+                if (page === "storiesPage") {
                   return (
-                    <StoriesPage onClick={page => setCurrentView(page)} />
+                    <StoriesPage onClick={page => setPage(page)} />
                   )
-                } else if (currentView === "arcsPage") {
+                } else if (page === "arcsPage") {
                   return (
-                    <ArcsPage onClick={page => setCurrentView(page)} />
+                    <ArcsPage onClick={page => setPage(page)} />
                   )
                 } else {
                   return (
-                    <FavoritesPage onClick={page => setCurrentView(page)}/>
+                    <FavoritesPage onClick={page => setPage(page)}/>
                   )
                 }
               })()}
@@ -205,9 +217,9 @@ function HomePage(){
             </header>
 
             <nav>
-                <button onClick={() => (setCurrentView("storiesPage"))}>Story</button> &nbsp; 
-                <button onClick={() => {(setCurrentView("arcsPage")); (notify())}}>Arcs</button> &nbsp; 
-                <button onClick={() => (setCurrentView("FavoritesPage"))}>Favorites</button>
+                <button onClick={() => (setPage("storiesPage"))}>Story</button> &nbsp; 
+                <button onClick={() => {(setPage("arcsPage")); (notify())}}>Arcs</button> &nbsp; 
+                <button onClick={() => (setPage("FavoritesPage"))}>Favorites</button>
                 <ToastContainer/>
             </nav>
 

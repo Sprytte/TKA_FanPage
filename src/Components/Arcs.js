@@ -1,6 +1,6 @@
 import React from "react";
 
-function Arcs({id,name, descrip, summary}){
+function Arcs({name, descrip, summary}){
     const ViewOne = ({onClick}) => (
         <div onClick={()=>onClick("view2")}>
             {name}<br/>

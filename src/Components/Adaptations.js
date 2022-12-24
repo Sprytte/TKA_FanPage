@@ -1,6 +1,6 @@
 import React from "react";
 
-function Adaptations({id,name, smallSummary, fullSummary, rating, creators, length, info, images}){
+function Adaptations({name, smallSummary, fullSummary, rating, creators, length, info, images}){
     const Gods = creators.split(',');
 
     const ViewOne = ({onClick}) => (
