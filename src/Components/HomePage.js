@@ -7,7 +7,7 @@ import Adaps from './Adaps';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Favorites from "./Favorites";
-import { Pane } from "react-sortable-pane";
+import { Pane, SortablePane } from "react-sortable-pane";
 
 function HomePage(){
     const [adaptations, setAdaptations] = useState([]);
@@ -101,17 +101,27 @@ function HomePage(){
             </ul>
         </div>
       );
+      const favorites = fav.map((i)=>{
+            return <Favorites
+            id = {i.id}
+            chapters = {i.chapters}
+            descrip = {i.description}
+            user = {i.username}></Favorites>
+            })
+
+      const panes = [0, 1].map(key => (
+        <Pane key={key} defaultSize={{width: '100%', height: 120}}>
+            {favorites[key]}
+        </Pane>
+      ))
+      
       const FavoritesPage = () => (
         <div>
             <h1>Fan Favorites</h1>
             <p>Below is a list of all the arcs inside of the light-novel.</p>
-            {fav.map((i)=>{
-                return <Pane key={i.id}><Favorites
-                id = {i.id}
-                chapters = {i.chapters}
-                descrip = {i.description}
-                user = {i.username}></Favorites> </Pane>
-            })}
+            <SortablePane direction="vertical" margin={20} defaultOrder={['0', '1']}>
+                {panes}
+            </SortablePane>
         </div>
       );
 
