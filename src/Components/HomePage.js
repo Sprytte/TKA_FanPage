@@ -114,8 +114,8 @@ function HomePage(){
             user = {i.username}></Favorites>
         })
         const length = favorites.length
-        const arry = []
         const arr = () => {
+            const arry = []
             for(var i = 0; i < length; i++)
                 arry.push(i)
             return arry;

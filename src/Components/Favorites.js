@@ -1,5 +1,3 @@
-import { Pane, SortablePane } from "react-sortable-pane";
-
 function Favorites({id, chapters, descrip, user}){
     return(
         <div>

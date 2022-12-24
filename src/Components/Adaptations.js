@@ -1,14 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React from "react";
 
-function Adaptations({id,name, smallSummary, fullSummary, rating, creators, length, info, images})
-{
+function Adaptations({id,name, smallSummary, fullSummary, rating, creators, length, info, images}){
     const Gods = creators.split(',');
-    const [counter, setCounter] = useState(0)
 
-    const [adapId, setAdapId] = useState(1);
     const ViewOne = ({onClick}) => (
         <div className="adaptationBoxes">
-            {setAdapId(id)}
             <img className="adapImg" src={images} alt="adaptation" onClick={() =>onClick("view2")}/>
             <div>{name}</div>
             <div>{smallSummary}</div>

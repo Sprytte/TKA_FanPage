@@ -1,16 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React from "react";
 
 function Arcs({id,name, descrip, summary}){
-
-    const [arcId, setArcId] = useState(1);
     const ViewOne = ({onClick}) => (
         <div onClick={()=>onClick("view2")}>
-            {setArcId(id)}
             {name}<br/>
             {descrip}<br/>
         </div>
       );
-      
     const ViewTwo = ({onClick}) => (
         <div className="sums" onClick={()=>onClick("view1")}>
             {summary}
