@@ -36,7 +36,7 @@ function HomePage(){
         loadArcs()
     },[])
 
-    const ViewOne = () => (
+    const StoriesPage = () => (
         <div>
             <h1>The King's Avatar</h1>
             <p>The King's Avatar started off as a light-novel, originally published on July 1, 2011 by Hu Dielan, also known as
@@ -70,7 +70,7 @@ function HomePage(){
             
         </div>
       );
-      const ViewTwo = () => (
+      const ArcsPage = () => (
         <div>
             <h1>Arcs</h1>
             <p>Below is a list of all the arcs inside of the light-novel.</p>
@@ -85,10 +85,37 @@ function HomePage(){
             </ul>
         </div>
       );
+      const FavoritesPage = () => (
+        <div>
+            <h1>Fan Favorites</h1>
+            <p>Below is a list of all the arcs inside of the light-novel.</p>
+            
+        </div>
+      );
 
-    const [currentView, setCurrentView] = React.useState("view1");
+    const [currentView, setCurrentView] = React.useState("storiesPage");
     const tempId = "custom-id-yes";
     const notify = () => (toast("Don't forget to support the author on QiDian!", {toastId: tempId}));
+    
+    const gettingViews = ()=>{
+        return (<>
+              {(() => {
+                if (currentView === "storiesPage") {
+                  return (
+                    <StoriesPage onClick={page => setCurrentView(page)} />
+                  )
+                } else if (currentView === "arcsPage") {
+                  return (
+                    <ArcsPage onClick={page => setCurrentView(page)} />
+                  )
+                } else {
+                  return (
+                    <FavoritesPage onClick={page => setCurrentView(page)}/>
+                  )
+                }
+              })()}
+        </>)
+    }
 
     return (
         <div className="bodyId">
@@ -97,21 +124,19 @@ function HomePage(){
             </header>
 
             <nav>
-                <button onClick={() => (setCurrentView("view1"))}>Story</button> &nbsp; 
-                <button onClick={() => {(setCurrentView("view2")); (notify())}}>Arcs</button> &nbsp; 
-                <button >Arcs</button>
+                <button onClick={() => (setCurrentView("storiesPage"))}>Story</button> &nbsp; 
+                <button onClick={() => {(setCurrentView("arcsPage")); (notify())}}>Arcs</button> &nbsp; 
+                <button onClick={() => (setCurrentView("FavoritesPage"))}>Favorites</button>
                 <ToastContainer/>
             </nav>
 
             <main>
-                {currentView === "view1" ? 
-                    <ViewOne onClick={page => setCurrentView(page)} /> : 
-                    <ViewTwo onClick={page => setCurrentView(page)} />}
+                {gettingViews()}
             </main>
 
             {/*<footer>
                 <h2>The King's avatar Fan Page</h2>
-    </footer>*/}
+            </footer>*/}
         </div>)
 }
 
