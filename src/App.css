@@ -51,6 +51,9 @@ footer{
   background-color: red;
   float: none;
 }
+.pain{
+  margin: 0px 23%;
+}
 
 nav{border-style:solid;
 	border-color:black;

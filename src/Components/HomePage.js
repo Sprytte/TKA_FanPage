@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import tkaPic from '../images/head.jpg';
 import Arcs from './Arcs';
-import Adaps from './Adaps';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Favorites from "./Favorites";
@@ -80,8 +79,13 @@ function HomePage(){
                 return <Adaptations
                 id = {i.id}
                 name = {i.adaptationName}
-                summary = {i.briefSummary}
-                images = {i.imageAddress}></Adaptations>
+                smallSummary = {i.briefSummary}
+                fullSummary = {i.fullSummary}
+                images = {i.imageAddress}
+                rating = {i.rating}
+                length = {i.length}
+                creators = {i.creators}
+                info = {i.extraInformation}></Adaptations>
             })}
             
         </div>
@@ -101,30 +105,75 @@ function HomePage(){
             </ul>
         </div>
       );
+        
       const favorites = fav.map((i)=>{
             return <Favorites
             id = {i.id}
             chapters = {i.chapters}
             descrip = {i.description}
             user = {i.username}></Favorites>
-            })
-
-      const panes = [0, 1].map(key => (
-        <Pane key={key} defaultSize={{width: '100%', height: 120}}>
+        })
+        const length = favorites.length
+        const arry = []
+        const arr = () => {
+            for(var i = 0; i < length; i++)
+                arry.push(i)
+            return arry;
+        }
+        const ar = arr()
+        const panes = ar.map(key => (
+        <Pane key={key} defaultSize={{width: '50%', height: 120}} className="pain">
             {favorites[key]}
         </Pane>
       ))
-      
       const FavoritesPage = () => (
         <div>
             <h1>Fan Favorites</h1>
-            <p>Below is a list of all the arcs inside of the light-novel.</p>
+            <p>Below are the fan favorite moments in the entire novel, ranked by preference. If they don't suit your taste, switch them
+                around as you please!
+            </p>
+            <p>Think a scene is missng? Add it yourself!</p>
+            <form onSubmit={formSubmit}>
+                <label>Chapter(s):</label> <input name='chapNb'></input> <br/>
+                <label>Scene(s) description:</label> <input name='sceneDescrip'></input> <br/>
+                <label>Username:</label> <input name='userName'></input>
+                <button type='submit'>Add Item</button>
+            </form>   
+
             <SortablePane direction="vertical" margin={20} defaultOrder={['0', '1']}>
                 {panes}
             </SortablePane>
         </div>
-      );
-
+    );
+    const addItem = (item)=>{
+        axios.post('http://localhost:8081/TKA/Adaptations/1/Favorites',{
+            chapters: item.chapters,
+            description: item.description,
+            username: item.username
+          })
+          .then((response)=>{
+            if(response === 200){
+                loadFavorites()
+            }
+          })
+          .catch((error)=>{
+            console.log(error);
+          });
+    }
+    const formSubmit = (event) =>{
+        event.preventDefault();
+        const itemC = event.target.elements.chapNb.value;
+        const itemD = event.target.elements.sceneDescrip.value;
+        const itemU = event.target.elements.userName.value;
+        event.target.elements.chapNb.value = "";
+        event.target.elements.sceneDescrip.value = "";
+        event.target.elements.userName.value = "";
+        if(itemC === '' || itemD === '' || itemU === ''){
+            window.alert("You cannot add nothing to the list");
+            return;
+        }
+        addItem({"chapters": itemC, "description": itemD, "username": itemU});
+    }
     const [currentView, setCurrentView] = React.useState("storiesPage");
     const tempId = "custom-id-yes";
     const notify = () => (toast("Don't forget to support the author on QiDian!", {toastId: tempId}));

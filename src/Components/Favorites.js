@@ -3,9 +3,9 @@ import { Pane, SortablePane } from "react-sortable-pane";
 function Favorites({id, chapters, descrip, user}){
     return(
         <div>
-            Chapter(s): {chapters} <br/>
-            {descrip} <br/>
-            {user} <br/>
+            <p>Chapter(s): {chapters} </p>
+            <p>{descrip} <br/>
+            <i>{user} </i><br/> </p>
         </div>
     )
 }
