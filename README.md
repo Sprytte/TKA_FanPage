@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# The King's Avatar Fan Page
+This was my final project for my "Java Web Programming" class.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description: 
+The application is a fan site that allows users to learn more about the light novel and its adaptations, as well as the best moments in the novel to allow readers
+to reread their favorite moments without having to search desperately for hours (as I have done).
 
-## Available Scripts
+The project was built using a full REST API using springboot on IntelliJ and ReactJS as the front-end. I also used the 'toast' and
+'stackable panes' libraries available on github.
 
-In the project directory, you can run:
+## Running the project 
+This project was made in two parts. This repositry is only the ReactJS front-end. To run the whole thing, you would need to clone both repositories.
 
-### `npm start`
+Once that's done, you can run the JPA project in IntelliJ, after which you can post all initial data using Postman (or anything similar) and, finally, run the project in Visual Studio Code using the "npm start" command. <br> 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The initial data is available in the "TKA_Requests.json" file in the repository, exported directly from Postman.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design
+Each page (story, arc, and favorite) is inside of the HomePage in a const which is switched out using onClick functions in the nav and a useState to switch
+between the pages. The items returned by getRequests are returned inside their corresponding page and then called in the HomePage by their function.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## End-Points:
+/TKA/ADAPTATIONS  ->  This allows get and post requests into the Story table. <br>
+/TKA/ADAPTATIONS/<id>  -> This allows get, put, and delete requests in the Story table. <br>
+/TKA/ADAPTATIONS/<storyId>/Arcs  -> This allows get, post, and delete requests in the Arc table. <br>
+/TKA/Arcs/<arcId>  -> This allows get, put and delete requests in the Arc table. <br>
+/TKA/Favorites/<favoriteId>  -> This allows for get and put requests in the Favorite table. <br>
+/TKA/Adaptations/<storyId>/Favorites  -> This allows get, post, and delete requests in the Favorite table.
