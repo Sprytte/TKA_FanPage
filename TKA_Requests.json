@@ -1,0 +1,1388 @@
+{
+	"info": {
+		"_postman_id": "a6e63ea6-6f8e-4387-a92b-0a51f29ab209",
+		"name": "TKA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24129289"
+	},
+	"item": [
+		{
+			"name": "Post Adaptations",
+			"item": [
+				{
+					"name": "Light Novel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adaptationName\": \"Light-Novel\",\r\n    \"briefSummary\": \"The original story.\",\r\n    \"rating\": \"4.6/5 on webnovel\",\r\n    \"creators\": \"Author: Butterfly Blue, Translator: Nomyummi, Editor: Nomyummi & GravityTales More\",\r\n    \"length\": \"1728 chapters\",\r\n    \"fullSummary\": \"The novel recounts the whole journey of the protagonist, Ye Xiu, from his forced retirement, to the beginnings of a new team, to his battles in the pro league and, finally, to his 4th and final championship.\",\r\n    \"extraInformation\": \"Highly recommended, Translated version can be read on webnovel.com, Original name: Quanzhi Gaoshou\",\r\n    \"imageAddress\": \"https://www.nightcomic.com/wp-content/uploads/2020/12/300.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Live Action",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adaptationName\": \"Live-Action\",\r\n    \"briefSummary\": \"Live-Action adaptation starring Yang Yang.\",\r\n    \"rating\": \"8.1/10 on imdb\",\r\n    \"creators\": \"Author: Butterfly Blue, Director: Shiyi Yue, Writers: Qiao Bingqing & Hu Dielan\",\r\n    \"length\": \"1 season of 40 episodes, 45 minutes each\",\r\n    \"fullSummary\": \"In the online game Glory, Ye Xiu is regarded as a textbook and a top-tier pro-player. However, due to a myriad of reasons, he is kicked from the team. After leaving the professional scene, he finds work in an Internet Cafe as a manager.\",\r\n    \"extraInformation\": \"Least recommended, Available with English subtitles on Netflix, Original name: Quanzhi Gaoshou\",\r\n    \"imageAddress\": \"https://upload.wikimedia.org/wikipedia/en/f/f1/The_King%27s_Avatar_%282019_web_series%29_poster.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Donghua",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adaptationName\": \"Donghua\",\r\n    \"briefSummary\": \"Chinese animation adaptation.\",\r\n    \"rating\": \"7.9/10 on myanimelist\",\r\n    \"creators\": \"Author: Butterfly Blue, Producer: bilibili & Tencent Penguin\",\r\n    \"length\": \"2 seasons (12 episodes each) plus 4 extra episodes of 23 minutes each\",\r\n    \"fullSummary\": \"The first season recounts his start in the internet cafe where we meet most of the team. The extras cover the first all-stars where his identity is revealed and the second season covers everything up until just before the challenger league.\",\r\n    \"extraInformation\": \"Highly recommended, Available on crunchyroll.com, Original name: Quanzhi Gaoshou\",\r\n    \"imageAddress\": \"https://m.media-amazon.com/images/M/MV5BZjIyMjE5ZDYtMTQxNC00NTEzLTgwYzYtMmM0NDg3OWFlYWM5XkEyXkFqcGdeQXVyNjMxNzQ2NTQ@._V1_.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manhua",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adaptationName\": \"Manhua\",\r\n    \"briefSummary\": \"Chinese comic adaptation.\",\r\n    \"rating\": \"4.8/5 on webnovel\",\r\n    \"creators\": \"Author: Butterfly Blue, Translator: Nomyummi, Editor: Nomyummi & GravityTales More\",\r\n    \"length\": \"96 chapters, Ongoing\",\r\n    \"fullSummary\": \"Despite all its chapters, it hasn't covered much from the original story. After getting a job at the internet cafe, he spends his days playing Glory and earning the wrath of the guilds. He and his party are hunted and ambushed by them.\",\r\n    \"extraInformation\": \"Switches from manga to manhua format halfway through, Available on webnovel.com, Original name: Quanzhi Gaoshou\",\r\n    \"imageAddress\": \"https://img.webnovel.com/bookcover/17959825305729101/300/300.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Arcs",
+			"item": [
+				{
+					"name": "Arc 1 chap 1-120",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"A new beginning 1-120\",\r\n    \"arcDescription\": \"The beginning after the end\",\r\n    \"summary\": \"Ye Xiu spends his day grinding away at Glory, setting records for himself and others at a fee, racking up materials and noobs to train. The beginnings of a team start to form.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Noobs chap 121-250",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Attention 121-250\",\r\n    \"arcDescription\": \"Lord Grim's noteriety is catching the eyes of friends and foes.\",\r\n    \"summary\": \"The pros start to take notice of Lord Grim and the guilds are placing the mystery man to the God. Ye Xiu keeps grinding, even impeded by their constant attempts to kill him and his party. More people join their group.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Christmas 263-292",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Christmas Event 263-292\",\r\n    \"arcDescription\": \"Christmas elves spawn in the game of Glory\",\r\n    \"summary\": \"Ye Xiu and co. hunt elves to get prizes. The guilds try to stop them, so they flee to Sin City, a higher level map. Still hunted, Ye Xiu grabs the aggro of every elf in the city until he has 300 trailing him. Afterwards, he slaughters them all.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Stars 1 chap 300-343",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"First All-Stars 300-343\",\r\n    \"arcDescription\": \"Season 8 All All-Stars\",\r\n    \"summary\": \"For the first time, Ye Xiu attends the event from the stands alongside Tang Rou and Chen Guo. They both get invited on stage for events. Ye Xiu steps in after Tang Rou fights Du Min over 20 times, fighting him and using Dragon Raises Its Head. He's back.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guild Creation chap 344-364",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Guild Creation 344-364\",\r\n    \"arcDescription\": \"Guild happy is created\",\r\n    \"summary\": \"Following Ye Xiu's reveal, Chen Guo hops on the pro train and creates a guild to gather more materials. Within seconds of its creation, hundreds of requests to join the guild are received, including some from enemy spies. Blue River babysits.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Battle chap 364-390",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Thousand Waves Lake 364-390\",\r\n    \"arcDescription\": \"The guilds gather to take down Happy\",\r\n    \"summary\": \"They ambush Thousand Creations only to get out ambushed by Ye Xiu and co. Ye Xiu and Su Mucheng drag the guilds into aquatic battles where they pulverize them. 390 -> The guilds yield & Ye Xiu recounts all their deaths\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spring Festival chap 399-407",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Spring Festival 399-407\",\r\n    \"arcDescription\": \"A festival for family\",\r\n    \"summary\": \"The original Ye Qiu shows up and stays at the cafe for a bit. Ye Xiu, Chen Guo, and Su Mucheng celebrate together.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HeavenDomain chap 410-440",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Heavenly Domain 410-440\",\r\n    \"arcDescription\": \"Entering a new realm in Glory\",\r\n    \"summary\": \"Ye Xiu and co. start the challenge and enter the Heavenlu Domain. They fight off the guilds ambushing them and continue levelling up. They join Loulan Slash's guild for protection.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gods chap 441-449",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Gods in Glory? 441-449\",\r\n    \"arcDescription\": \"Huang Shaotian wants a fight. Ye Xiu is a gremlin.\",\r\n    \"summary\": \"Huang Shaotian challenges Ye Xiu to a 1v1 to which he finally agrees. The other pros spectate. Ye Xiu makes Huang Shaotian fight the members of Team Heavenly Swords, he's very loud. Once Ye Xiu fights him, he crushes him and his ears are spared.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scrap Pick chap 455-501",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Scrap Picking 455-501\",\r\n    \"arcDescription\": \"Ye Xiu infuriates the guilds even more\",\r\n    \"summary\": \"Ye Xiu scrap picks the big guilds during boss fights and encounters a fellow scrap picker named Deception that, unfortunately for him, catches his eye.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wei Chen chap 509-544",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Wei Chen 509-544\",\r\n    \"arcDescription\": \"An old face and oppurtunity appears\",\r\n    \"summary\": \"A bounty is placed on Ye Xiu by the guilds; Wei Chen goes to claim it. He loses his Silver weapon to Ye Xiu, who uses it to blackmail Wei Chen into him. Wei Chen knows how to gain more skill points. The guilds keep hunting, they keep grinding\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Super Hottie chap 548-598",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Unrivaled Super Hottie 548-598\",\r\n    \"arcDescription\": \"Ye Xiu gets a new account\",\r\n    \"summary\": \"To find a cleric for his team, Ye Xiu goes undercover under the guild of his greatest nemesis: Tyranny. As usual, chaos ensues.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Building Team chap 600-669",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Building the team 600-669\",\r\n    \"arcDescription\": \"All members have been found, all that's needed is to grow.\",\r\n    \"summary\": \"An Wenyi is unearthed. They gather resources and sell the secrets to gaining skill points to Samsara for 20M\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Boss Kills chap 670-715",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Wild Bosses 670-715\",\r\n    \"arcDescription\": \"Alliances are built, bosses are stolen\",\r\n    \"summary\": \"Ye Xiu forms an alliance with Heavenly Swords to hunt wild bosses. Their alliance then includes several other small guilds and they became an unstoppable force.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team Grinding 721-766",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Grinding 721-766\",\r\n    \"arcDescription\": \"Materials and experience are needed\",\r\n    \"summary\": \"Ye Xiu and co. keep levelling in dungeons and hunting for wild bosses, gaining experience and materials to fund their future.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Preparing 767-798",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Preparing 767-798\",\r\n    \"arcDescription\": \"The team trains for the challenger league\",\r\n    \"summary\": \"The whole team is finnaly assmebled and they eagerly practice to prepare themselves for the challenger league.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chal. League chap 801-853",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Start of Challenger League 801-853\",\r\n    \"arcDescription\": \"Their journey to the professional stage begins.\",\r\n    \"summary\": \"Team Happy crushes their first opponents, the matches happening online to weed out the weaker ones. Happy gains attention as the possible team God Ye Qiu resides in, gaining support and animosity.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lvl 80 chap 855-883",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Level 75 855-883\",\r\n    \"arcDescription\": \"A new level gap is added\",\r\n    \"summary\": \"The Glory level cap is raised, new dungeons are added to the game, Ye Xiu and other pros race to get first-clears.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Christmas Event chap 894-917",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Second Christmas Event 894-917\",\r\n    \"arcDescription\": \"Presents can be gained but the pros have joined\",\r\n    \"summary\": \"Fights for stockings are everywhere and the pros are dominating. Ye Xiu's team has an eventful fight against team Excellent Era, where his shamelessness brings about victory once again.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Boring All Star chap 920-936",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Short All-Stars 920-936\",\r\n    \"arcDescription\": \"All-Stars event and a small after party\",\r\n    \"summary\": \"chap 926 they meet up with team Heavenly Swords and go to a restaurant. Ye Xiu fights Sun Zheping. They go to a fancy dinner party hosted by Lou Guniang and Ye Xiu speedruns Flight of the Bumblebee.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Off. Chall. chap 965-995",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Offline Challenger League 965-995\",\r\n    \"arcDescription\": \"Fighting Team Jade Dynasty\",\r\n    \"summary\": \"The challenger league is now down to the top 20 teams. Team Happy struggle against their strongest foe yet: team Jade Dynasty. After a gruelling fight, they manage to scrap a win and a spot in the finals.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Final Chall. chap 999-1052",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Challenger League Finals\",\r\n    \"arcDescription\": \"Happy vs Excellent Era\",\r\n    \"summary\": \"Two 1v3s, Wu Chen, 'Glory isn't a single player game'\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post-season 1068-1084",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Post-season 1068-1084\",\r\n    \"arcDescription\": \"Things are changing and a season is won.\",\r\n    \"summary\": \"Samsara wins the championship. Excellent Era has a major sale and Guang Ronfei joins Happy.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Training chap 1085-1095",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Training 1085-1095\",\r\n    \"arcDescription\": \"The team gains experience.\",\r\n    \"summary\": \"The pros join Glory and fight for bosses. Happy uses them as target practice.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Summer Festival 1096-1122",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Summer Festival 1096-1122\",\r\n    \"arcDescription\": \"Ghost Parade and leaderboards\",\r\n    \"summary\": \"The pros hunt for ghosts and fight for the top spots. Ye Xiu, as usual, raises everyone's blood pressure.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fang Rui chap 1124-1138",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Dirty Qi Master 1124-1138\",\r\n    \"arcDescription\": \"Happy gains a new member\",\r\n    \"summary\": \"Ye Xiu makes his first post on Weibo to invite Fang Rui. He joins and switches classes from Thief to Qi Master. They buy a top-tier Qi Master. He struggles in his class change.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Beginning of Season chap 1139-1240",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Season 10 Begins 1139-1240\",\r\n    \"arcDescription\": \"The first matches being\",\r\n    \"summary\": \"Happy experience a clean sweep in their first match 'feeling rusty'. They start off rough but gain their footing and start sweeping games of their own, laying traps and ambushes.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Stars 2 chap 1244-1271",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Tenth Season All Stars 1244-1271\",\r\n    \"arcDescription\": \"The second all-stars\",\r\n    \"summary\": \"Tyranny's hatred for Ye Xiu remains unparelled, Ye Xiu gets challenged by every rookie (7), 1258 final Pro team battle -> Ye Xiu & Han Wenqing on the same team, no healer & Zhang Xinjie fights a 1v1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Round 18 1272-1282",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Happy vs Wind Howl 1272-1282\",\r\n    \"arcDescription\": \"Halfway through the season\",\r\n    \"summary\": \"Ye Xiu WRECKING Tang Hao\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Midway 10th 1289-1306",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Happy vs Samsara 1289-1306\",\r\n    \"arcDescription\": \"They are now midway through the season and up against the strongest team.\",\r\n    \"summary\": \"The streak continues against Jiang Botao! Sun Xiang character development. They lost the team battle very fast, all blame attributed to An Wenyi, the cleric.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Round 23 1308-1318",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"More matches 1308-1318\",\r\n    \"arcDescription\": \"Happy fights various teams.\",\r\n    \"summary\": \"Tyranny home stadium -> a nostalgic feeling 2-8 Loss. 312-314: An Wenyi match MVP 9-1 victory. 315-316: Game of hide-and-seek. Mo Fan character development 2-8 loss. 317: jump to round 29. Happy win against Heanvenly swords.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Round 27 chap 1320-1334",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Round 27 1320-1334\",\r\n    \"arcDescription\": \"Happy vs Tiny Herb\",\r\n    \"summary\": \"26 win streak! Qiao Yifan won against Gao Yingjie. Happy target Wang Jiexi in the sky map, ultimately leading to their victory 8-2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "What counter? chap 1341-1343",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"What Counter? 1341-1343\",\r\n    \"arcDescription\": \"Happy vs Royal Style\",\r\n    \"summary\": \"1342 -> Ye Xiu vs Tian Sen 'Two Umbrellas?!?' 7-3 victory.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Final 6 chap 1351-1382",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"End of the 10th season 1351-1382\",\r\n    \"arcDescription\": \"The final 6 rounds of the season before playoffs\",\r\n    \"summary\": \"Happy, Wind Howl, Hundred Blossoms, Thunderclap, 301 Degrees fight for the final slots in the playoffs. 1370 -> Team Happy telling Liu Hao 'you played pretty well'\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quarter Finals chap 1387-1478",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Quarter finals 1387-1478\",\r\n    \"arcDescription\": \"The beginning of the playoffs: Happy vs Blue Rain\",\r\n    \"summary\": \"Ye Xiu starts his battle against Song Xiao. Most of the matches following the 1v1s involved stalling and ended up winning their first home match (1428).\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Semi-Finals chap 1480-1573",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Semi-Finals 1480-1573\",\r\n    \"arcDescription\": \"Tyranny vs Happy\",\r\n    \"summary\": \"1481-1515: first round Happy Home Game destroying the map, 1518-1532: secound round Tyranny Home Game sand messing with movements, 1535-1572 third round tight fight but Ye Xiu's life risking strike sealed the deal.\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finals 1578-1725",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"arcName\": \"Finals 1578-1725\",\r\n    \"arcDescription\": \"Happy vs Samsara\",\r\n    \"summary\": \"First Round: 1578 Happy Home Game and their loss, Second Round: 1581-1634 Samsara Home Game Ye Xiu conducting 1v3 against the best players & Fang Rui CARRYING and they win. Third Round: 1640-1725 legendary 1v3 with highest APM ever.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Arcs",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Arcs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorites",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Favorites",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight of Bumblebee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chapters\": \"934-935\",\r\n    \"description\": \"Ye Xiu protecting his friend's honor by speedrunning Flight of the Bumblebee on the piano, to the great horror of everyone present\",\r\n    \"username\": \"Anonymous\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Favorites",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rookie challenges",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chapters\": \"1247-1252\",\r\n    \"description\": \"Ye Xiu gets challenged by all the rookies, tries to run away, crushes them, forfeits, and does a 2v1\",\r\n    \"username\": \"YeXiu$imp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/TKA/Adaptations/1/Favorites",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Adaptations",
+								"1",
+								"Favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/TKA/Favorites/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"TKA",
+								"Favorites",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
